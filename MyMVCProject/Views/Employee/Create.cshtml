@@ -1,0 +1,49 @@
+﻿@model MyMVCProject.Models.Employee
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Create Employee</h4>
+                 
+            </div>
+            <div class="card-body">
+                <div>
+                    <form asp-action="Create" asp-controller="Employee" enctype="multipart/form-data">
+                        <div class="form group">
+                            <label asp-for="FirstName"></label>
+                            <input asp-for="FirstName" class="form-control" />
+                        </div>
+                        <div class="form group">
+                            <label asp-for="LastName"></label>
+                            <input asp-for="LastName" class="form-control" />
+                        </div>
+                        <div class="form group">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" class="form-control" />
+                        </div>
+                        <div class="form group">
+                            <label asp-for="Contect"></label>
+                            <input asp-for="Contect" class="form-control" />
+                        </div>
+                        <div class"form  group">
+                <label >Please Select Image</label>
+                <input type="file" name="Image" class="form-control" />
+            </div>
+                        <div class="form group">
+                            <label asp-for="IsActive"></label>
+                            <select asp-for="IsActive" class="form-control">
+                                <option value="true">IsActive</option>
+                                <option value="false">InActive</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="create" class="btn btn-success" />
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+            </div>
+</div>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MyMVCProject.Models.Employee>
+<a asp-action="Create" asp-controller="Employee" class="btn btn-danger">Create</a>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        @*<th>Gender</th>*@
+        <th>Image</th>
+    </tr>
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.FirstName &nbsp;@emp.LastName</td>
+            <td>@emp.Email</td>
+            <td>@emp.Contect</td>
+            @*<td>@emp.Gender</td>*@
+            <td><img src="@emp.Image" height="60" width="60"/></td>
+
+
+        </tr>
+
+    }
+</table>
